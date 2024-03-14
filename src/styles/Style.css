@@ -1,0 +1,144 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header styles */
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logo animation */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* User list and details styles */
+.user-list {
+  max-width: 623px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-heading {
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.user-style {
+  background-color: #ececec;
+  color: black;
+  font-size: 20px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.user-style:hover {
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #d4d4d4;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.user-details {
+  max-width: 404px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.user-details img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.user-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-details p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .user-list {
+    padding: 10px;
+  }
+
+  .user-heading,
+  .user-style {
+    font-size: 18px;
+  }
+
+  .user-details {
+    padding: 15px;
+  }
+
+  .user-details img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-details h2 {
+    font-size: 20px;
+  }
+
+  .user-details p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-list {
+    padding: 5px;
+  }
+
+  .user-details {
+    padding: 10px;
+  }
+
+  .user-details img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .user-details h2 {
+    font-size: 18px;
+  }
+
+  .user-details p {
+    font-size: 14px;
+  }
+}
