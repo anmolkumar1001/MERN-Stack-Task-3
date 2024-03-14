@@ -18,7 +18,7 @@ const UserList = ({ data, userDetails, handleClick }) => {
           >
             <div>
               <img
-                src={user.avatar ? user.avatar : defaultAvatar}
+                src={user.avatar || defaultAvatar} // Use defaultAvatar if user.avatar is not available
                 alt=""
                 className="user-image"
               />
