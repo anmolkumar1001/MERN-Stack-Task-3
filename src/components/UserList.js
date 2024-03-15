@@ -3,29 +3,43 @@ import defaultAvatar from "../Assets/user.png";
 
 const UserList = ({ data, userDetails, handleClick }) => {
   return (
-    <div className="me-5">
-      <div className="list-group rounded-top user-heading fw-semibold text-left border-0 d-flex mx-auto justify-content-center align-items-center">
-        Users List
-      </div>
-      <div className="list-group align-items-center">
-        {data.map((user) => (
-          <div
-            key={user.id}
-            className={`list-group-item list-group-item-action mb-3 rounded-1 user-style fw-semibold text-left border-0 d-flex align-items-center ${
-              userDetails.id === user.id ? "selected" : ""
-            }`}
-            onClick={() => handleClick(user)}
-          >
-            <div>
-              <img
-                src={user.avatar || defaultAvatar} // Use defaultAvatar if user.avatar is not available
-                alt=""
-                className="user-image"
-              />
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-12 col-md-8">
+          <div className="card shadow">
+            <div className="card-header bg-primary text-white text-center">
+              <h5 className="mb-0">Users List</h5>
             </div>
-            <div>{`${user.profile.firstName} ${user.profile.lastName}`}</div>
+            <div className="card-body">
+              {data.map((user) => (
+                <div
+                  key={user.id}
+                  className={`list-group-item list-group-item-action mb-3 rounded-1 user-style fw-semibold text-left border-0 d-flex align-items-center ${
+                    userDetails.id === user.id ? "selected" : ""
+                  }`}
+                  onClick={() => handleClick(user)}
+                >
+                  <div className="user-avatar">
+                    <img
+                      src={user.avatar || defaultAvatar}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = defaultAvatar;
+                      }}
+                      alt=""
+                      className="user-image img-fluid rounded-circle"
+                    />
+                  </div>
+                  <div className="user-details ms-3">
+                    <h6 className="mb-0">
+                      {`${user.profile.firstName} ${user.profile.lastName}`}
+                    </h6>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

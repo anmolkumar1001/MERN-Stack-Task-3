@@ -39,13 +39,19 @@ function App() {
   }
 
   return (
-    <div className="App d-flex justify-content-center">
-      <UserList
-        data={data}
-        userDetails={userDetails}
-        handleClick={handleClick}
-      />
-      {userDetails.avatar && <UserDetails userDetails={userDetails} />}
+    <div className="App container-fluid py-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <UserList
+            data={data}
+            userDetails={userDetails}
+            handleClick={handleClick}
+          />
+        </div>
+        <div className="col-md-6">
+          {userDetails.avatar && <UserDetails userDetails={userDetails} />}
+        </div>
+      </div>
     </div>
   );
 }

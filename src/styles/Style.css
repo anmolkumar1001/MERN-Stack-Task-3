@@ -4,9 +4,6 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-.App {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -18,45 +15,35 @@ body {
   text-align: center;
 }
 
-/* Logo animation */
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 /* User list and details styles */
 .user-list {
-  max-width: 623px;
-  margin: 0 auto;
   padding: 20px;
 }
 
 .user-heading {
-  background-color: white;
-  color: black;
+  background-color: #f8f9fa;
+  color: #212529;
   font-size: 24px;
   padding: 10px;
   border-radius: 8px;
 }
 
 .user-style {
-  background-color: #ececec;
-  color: black;
+  background-color: #f8f9fa;
+  color: #212529;
   font-size: 20px;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
 }
 
 .user-style:hover {
-  background-color: #e4e4e4;
+  background-color: #e9ecef;
   cursor: pointer;
 }
 
 .selected {
-  background-color: #d4d4d4;
+  background-color: #dee2e6;
 }
 
 .user-image {
@@ -67,16 +54,14 @@ body {
 }
 
 .user-details {
-  max-width: 404px;
-  margin: 0 auto;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
   border-radius: 8px;
 }
 
 .user-details img {
-  width: 100px;
-  height: 100px;
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
 }
